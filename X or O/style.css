@@ -1,0 +1,124 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.background {
+    background-color: #12181B;
+    height: 100vh;
+    padding-top: 10px;
+}
+
+.titles {
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    margin-top: 10%;
+}
+
+.display {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    display: grid;
+    max-width: 300px;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 33% 33% 33%;
+}
+
+.container>div {
+    border: 1px solid white;
+    min-width: 100px;
+    min-height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    cursor: pointer;
+    ;
+}
+
+.playerX {
+    color: #09c372
+}
+
+.playerO {
+    color: #498AFB
+}
+
+.controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+
+#reset {
+    color: rgb(33, 31, 31);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 20px;
+    margin-left: 1em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: scale(1.2);
+}
+
+
+
+.modal {
+    position: fixed;
+    top: 28%;
+    left: 31%;
+    height: 40vh;
+    width: 38vw;
+    background: red;
+    animation: modalSlow 0.5s linear;
+    display: none
+}
+.modal_inner>p{
+    font-size: 40px;
+    margin-top: 90px;
+    text-align: center;
+    padding: 20px;
+    font-weight: 600;
+}
+.modal_inner>button{
+    color: rgb(33, 31, 31);
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 25px;
+    cursor: pointer;
+    transition: 0.5s;
+    display: block;
+    margin: auto;
+}
+@keyframes modalSlow {
+    from {
+        height: 0vh;
+        width: 0vw;
+      
+        opacity: 0;
+    }
+
+    to {
+        height: 40vh;
+        width: 20vw;
+        opacity: 1;
+    }
+}
+
